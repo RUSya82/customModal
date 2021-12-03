@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./dist/main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="_container">
+            Тест класса модального окна
+        </div>
+    </header>
+    <main>
+        <div class="_container">
+            <p>Класс модального окна позволяет быстро прикрутить скрипт модального окна(сколько угодно окон) к Вашему сайту</p>
+            <p>Также с помощью callback - функций возможно гибко настраивать открытие других модальных окон (окно благодарности например) и их закрытие через таймер</p>
+            <p>Для получения экземпляра модального окна реализована статическая функция modalGetInstance, которая в замыкании хранит массив со всеми объектами модалок</p>
+            <p>Это дает нам контроль, и не позволяет создавать дубли объектов, соответственно не навешивая новых событий на кнопки</p>
+            <p>Ниже кнопки активации первой модалки с формой, если форму отправить, то выйдет окно со спасибками</p>
+            <button class="modal1-activator btn form-btn site-btn">Modal 1</button>
+            <button class="modal1-activator btn form-btn site-btn">Modal 1</button>
+            <button class="modal1-activator btn form-btn site-btn">Modal 1</button>
+            <p>Класс предназначен в первую очередь для облегчения работы JS программиста</p>
+            <p>Стили модалки, анимация открытия, закрытия - остаются на верстальщике, требуется передать лишь класс открытого модального окна</p>
+            <p>Ниже кнопки для открытия второй модалки</p>
+            <button class="modal2-activator btn form-btn site-btn">Modal 2</button>
+            <button class="modal2-activator btn form-btn site-btn">Modal 2</button>
+            <p>Класс расширяем по желанию, этим и хорошо ООП подход</p>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="_container">
+            Footer
+        </div>
+    </footer>
+</div>
+<div class="modal modal-form">
+    <div class="modal-content">
+        <div class="modal-close">X</div>
+        <form action="#" class="modal-form">
+            <input type="text" name="username" placeholder="Name">
+            <button class="btn form-btn submit-btn" type="submit">Send form</button>
+        </form>
+    </div>
+</div>
+<div class="modal modal-thanks">
+    <div class="modal-content">
+        <p>Спасибо</p>
+        <p>Мы скоро с Вами свяжемся</p>
+    </div>
+</div>
+<div class="modal modal-dublicated">
+    <div class="modal-content">
+        <div class="modal-close">X</div>
+        <p>Это просто дубль модалки для теста</p>
+    </div>
+</div>
+<div class="modal modal-dublicated">
+    <div class="modal-content">
+        <div class="modal-close">X</div>
+        <p>Это просто дубль модалки для теста</p>
+    </div>
+</div>
+</body>
+</html>
