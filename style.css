@@ -71,7 +71,6 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 .modal.show{
     opacity: 1;

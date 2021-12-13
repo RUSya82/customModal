@@ -17,14 +17,11 @@ const modalThanks = modalInstance({
     modalID: 'modalThanks',
     modalSelector: '.modal-thanks',
     modalActiveClass: 'show',
+    modalContentClass: 'modal-content',
+    buttonsClassName: null
 });
 //просто ещё модалка
-const modalDublicated = modalInstance({
-    modalID: 'modalDublicated',
-    modalSelector: '.modal-dublicated',
-    modalActiveClass: 'show',
-    buttonsClassName: 'modal2-activator',
-    modalContentClass: 'modal-content',
-    buttonCloseClass: 'modal-close',
+const modalDublicate = modalInstance({
+    modalID: 'modalDublicate',
 });
 sendForm();

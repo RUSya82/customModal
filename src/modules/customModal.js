@@ -15,19 +15,21 @@ class customModal {
      * @param useFadeCLose - использовать ли клик по подложке для закрытия
      */
     constructor({
-                    modalID = 'modal',
-                    modalSelector = '.modal' ,
-                    buttonsClassName = 'modal-activator',
-                    modalActiveClass = 'modal-active',
-                    modalContentClass = 'modal-content',
-                    buttonCloseClass = 'modal-close',
+                    modalID = 'customModal',
+                    modalSelector = '.custom-modal' ,
+                    buttonsClassName = 'custom-modal-activator',
+                    modalActiveClass = 'show',
+                    modalContentClass = 'custom-modal-content',
+                    buttonCloseClass = 'custom-modal-close',
                     useEscape = true,
                     useFadeCLose = true,
                 }) {
         try{
             this.modalID = modalID;
             this.modal = document.querySelector(modalSelector);
-            this.modalActivators = document.querySelectorAll('.' + buttonsClassName);
+            if(buttonsClassName){
+                this.modalActivators = document.querySelectorAll('.' + buttonsClassName);
+            }
             this.modalActiveClass = modalActiveClass;
             this.modalContentClass = modalContentClass;
             this.buttonCloseClass = buttonCloseClass;
