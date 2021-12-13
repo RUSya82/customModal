@@ -7,8 +7,8 @@ Class for modal
 Это дает нам контроль, и не позволяет создавать дубли объектов,соответственно не навешивая новых событий на кнопки.
 Класс предназначен в первую очередь для облегчения работы JS программиста. Стили модалки, анимация открытия, закрытия - остаются на верстальщике, требуется передать лишь класс открытого модального окна  
 
-##Стандартное использование
-###HTML
+## Стандартное использование
+### HTML
 ```HTML
 <div class="modal custom-modal">
     <div class="modal-content custom-modal-content">
@@ -17,8 +17,8 @@ Class for modal
     </div>
 </div>
 ```
-###CSS
-```примерный CSS
+### примерный CSS
+```CSS
 .modal{
     opacity: 0;
     visibility: hidden;
@@ -56,7 +56,7 @@ Class for modal
     cursor: pointer;
 }
 ```
-###JavaScript
+### JavaScript
 ```JavaScript
   import {modalInstance} from "./modules/customModal";
   const modalDublicate = modalInstance({
