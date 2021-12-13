@@ -44,11 +44,11 @@ class customModal {
 
 
     }
-
+    //инициализация модалки, тут могут быть и другие методы
     init() {
         this.addListener();
     }
-
+    // Добавляем обработку событий
     addListener() {
         this.modalActivators.forEach(activator => {
             activator.addEventListener('click', (e) => {
@@ -95,6 +95,11 @@ class customModal {
         this.modal.classList.remove(this.modalActiveClass);
         callBack();
     }
+
+    /**
+     * Обёртка над методом openModal, для открытия модалки и закрытия по таймеру
+     * @param duration
+     */
     openModalWithTimer(duration){
         this.openModal(() => {
             setTimeout(() => {
@@ -172,14 +177,11 @@ class customModal {
         const data = [];
         return function (params){
             let object = data.find(item => item.modalID === params.modalID);
-            // console.log(data)
             if(object){
-                console.log('old modal')
                 return object;
             } else {
                 const obj = new customModal(params);
                 data.push(obj);
-                console.log('new modal')
                 return obj;
             }
         }

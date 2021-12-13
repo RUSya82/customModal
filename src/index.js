@@ -1,7 +1,10 @@
 import {modalInstance} from "./modules/customModal";
 import sendForm from "./modules/sendForm";
-
+import Swiper from 'swiper';
+// import Swiper styles
+import 'swiper/css';
 //модалка с формой
+
 const modalForm = modalInstance({
     modalID: 'modalForm',
     modalSelector: '.modal-form',
